@@ -2,48 +2,60 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="yainP3KJCHrQbhDKeOIIrBsGixFQUfvR1JroW0ehpRo" />
+    <meta name="google-site-verification" content="yainP3KJCHrQbhDKeOIIrBsGixFQUfvR1JroW0ehpRo"/>
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>
+    <meta name="description"
+          content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 
     <link rel="author" href="https://plus.google.com/keshavkatwe"/>
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "
+    /feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
-<!--    <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>-->
+    <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+          rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="{{"/bower_components/bootstrap/dist/css/bootstrap.min.css" | prepend: site.baseurl}}"/>
-    <link rel="stylesheet" href="{{"/bower_components/font-awesome/css/font-awesome.css" | prepend: site.baseurl}}"/>
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{"
+    /bower_components/bootstrap/dist/css/bootstrap.min.css" | prepend: site.baseurl}}"/>
+    <link rel="stylesheet" href="{{"
+    /bower_components/font-awesome/css/font-awesome.css" | prepend: site.baseurl}}"/>
+    <link rel="stylesheet" href="{{ "
+    /css/main.css" | prepend: site.baseurl }}">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summery">
     <meta name="twitter:site" content="@keshav_katwe">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
-    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="twitter:image" content="{% if page.thumbnail %}{{ page.thumbnail}}{% else %}{{ site.thumbnail }}{% endif %}">
+    <meta name="twitter:title"
+          content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+    <meta name="twitter:description"
+          content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image"
+          content="{% if page.thumbnail %}{{ page.thumbnail}}{% else %}{{ site.thumbnail }}{% endif %}">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+    <meta property="og:title"
+          content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}"/>
     {% if page.title %}
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="article"/>
     {% endif %}
-    <meta property="og:url" content="{{page.url | prepend: site.baseurl | prepend: site.url}}" />
-    <meta property="og:image" content="{% if page.thumbnail %}{{ page.thumbnail}}{% else %}{{ site.thumbnail }}{% endif %}" />
-    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" /> 
-    <meta property="og:site_name" content="Keshav Katwe" />
+    <meta property="og:url" content="{{page.url | prepend: site.baseurl | prepend: site.url}}"/>
+    <meta property="og:image"
+          content="{% if page.thumbnail %}{{ page.thumbnail}}{% else %}{{ site.thumbnail }}{% endif %}"/>
+    <meta property="og:description"
+          content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
+    <meta property="og:site_name" content="Keshav Katwe"/>
 
 </head>

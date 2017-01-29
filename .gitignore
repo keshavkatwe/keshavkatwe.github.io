@@ -4,3 +4,4 @@ _site
 node_modules
 nbproject/private/private.xml
 nbproject/
+.idea/
