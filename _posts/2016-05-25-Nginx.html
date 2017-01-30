@@ -3,17 +3,107 @@ layout: post
 title:  "Nginx - Setting up server in UBUNTU"
 date:   2017-01-29 12:27:00 +0530
 categories: SERVER
-thumbnail: https://thumbsplus.tutsplus.com/uploads/users/15/posts/21877/preview_image/ngingx.png?height=300&width=300
+thumbnail: https://www.therandombits.com/wp-content/uploads/2016/12/nginx.jpg
 author: Keshav Katwe
 ---
 
-<p>Nginx is a reverse proxy. Provides middle layer between application layer and client layer.</p>
-
-<p>Nginx provides</p>
+<p>Nginx is a middle layer between application layer and client layer.</p>
+<br>
+<h4>Nginx provides</h4>
 <ul>
-  <li>Provides SSL Compatibles.</li>
-  <li>Load Balancing</li>
-  <li>Caching</li>
-  <li>Compress Data, speed up requests.</li>
-  <li>Request queueing</li>
+    <li>SSL Compatibles.</li>
+    <li>Load Balancing</li>
+    <li>Caching</li>
+    <li>Compress Data, speed up requests.</li>
+    <li>Request queueing</li>
 </ul>
+
+
+<h3>Steps for setting up NGINX</h3>
+<ol>
+    <li>
+        <p>Login through SSH to your VM</p>
+        <pre>ssh  username@ipaddress</pre>
+    </li>
+    <li>
+        <p>Update your Ubuntu Repository</p>
+        <pre>sudo apt-get update</pre>
+        <pre>sudo apt-get upgrade -y</pre>
+        <h6 class="text-right"><code>-y</code> indicates yes for question asked during installation</h6>
+    </li>
+    <li>
+        <p>Adding PPA repository of nginx</p>
+        <pre>sudo add-apt-repository ppa:nginx/stable</pre>
+        <pre>sudo apt-get update</pre>
+    </li>
+    <li>
+        <p>Lets install nginx through command</p>
+        <pre>sudo apt-get install nginx</pre>
+    </li>
+    <li>
+        <p>Start Nginx server</p>
+        <pre>sudo service nginx start</pre>
+    </li>
+    <li>
+        <p>Now try to access your IP Address in your browser.If everything worked fine, You should see <strong>Welcome
+            to nginx!</strong> page.</p>
+    </li>
+</ol>
+
+<br>
+<h3>From here you can host Multiple websites</h3>
+<ol>
+    <li>
+        <p>We shall go to <code>/opt</code> and create folder <code>www</code>. In this folder we will be storing all
+            our static web projects.</p>
+        <pre>/opt$ mkdir www</pre>
+    </li>
+    <li>
+        <p>Inside <code>www</code> we shall create a project folder with the domain name of the project.</p>
+        <pre>/opt/www$ mkdir xyz@domain.com</pre>
+    </li>
+    <li>
+        <p>We shall create a sample HTML file with name <code>index.html</code></p>
+        <pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Hello world&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+    </li>
+    <li>
+        <p>We shall go to <code>/etc/nginx/sites-available</code> and create a config file for our website. Create a config file with a domain name <code>vi xyz@domain.com</code></p>
+        <pre>
+server {
+    listen 80;
+    server_name xyz@domain.com;
+    access_log /opt/www/xyz@domain.com/access.log;
+
+    root /opt/www/xyz@domain.com
+}
+        </pre>
+        <ul>
+            <li><b>listen: </b>Indicates the port to listen</li>
+            <li><b>server_name: </b>is the domain name</li>
+            <li><b>access_log: </b>is the path you want to store your access logs</li>
+            <li><b>root: </b>is the path where our project files resides</li>
+        </ul>
+        <br>
+    </li>
+    <li>
+        <p>Next will go to <code>sites-enabled</code>folder. And will create a symbolic link with the config.</p>
+        <pre>/etc/nginx/sites-enabled$ sudo ln -s /etc/nginx/sites-available/xyz@domain.com xyz@domain.com</pre>
+        <h6 class="text-right"><code>-s</code> indicates symbolic link</h6>
+    </li>
+    <li>
+        <p>Finally restart your nginx</p>
+        <pre>sudo service nginx restart</pre>
+    </li>
+    <li>
+        <p>Now your website is up and running. Try to access your domain in your browser</p>
+    </li>
+</ol>
