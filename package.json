@@ -1,17 +1,19 @@
 {
-  "name": "keshav",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "keshav-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
   },
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "astro": "^7.3.8"
+  },
   "devDependencies": {
-    "browser-sync": "^2.12.8",
-    "gulp": "^3.9.1",
-    "gulp-shell": "^0.5.2",
-    "lodash": "^4.12.0"
+    "@astrojs/check": "^0.9.0",
+    "typescript": "^5.0.0"
   }
 }
