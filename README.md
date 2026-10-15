@@ -28,7 +28,9 @@ Google Fonts supplies Manrope and DM Sans with system font fallbacks. External p
 
 ## Review and deployment
 
-Work is isolated on `codex/astro-portfolio`. CI checks and builds the site; it does not deploy. No live-site change is made by pushing this branch. After approval, configure GitHub Pages to use GitHub Actions and add Astro's official Pages deployment workflow for the repository's default branch. Astro's `site` already points to the user-site URL, so no repository base path is needed.
+The source is maintained on `master`. `.github/workflows/deploy.yml` checks and builds the site on Node 22, uploads `dist` as a Pages artifact and deploys through GitHub Actions. Pushes to `master` deploy automatically; the workflow can also be dispatched manually. `check.yml` checks development branches and pull requests.
+
+GitHub Pages must use GitHub Actions as its build source. Astro's `site` points to the user-site URL, so no repository base path is needed. Previous versions remain recoverable through Git history.
 
 ## Research and direction
 
