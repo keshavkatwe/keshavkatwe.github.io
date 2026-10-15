@@ -14,7 +14,7 @@ npm run build
 npm run preview
 ```
 
-Featured projects are edited in `src/data/projects.ts`. Layout lives in `src/pages/index.astro`, styling in `src/styles/global.css`, and progressive motion in `src/scripts/motion.ts`.
+Featured project summaries are edited in `src/data/projects.ts`; full engineering stories live in `src/data/stories.ts` and render at `/work/[slug]/`. The progressively enhanced system explorer keeps every step readable without JavaScript. Layout lives in `src/pages/index.astro`, styling in `src/styles/global.css`, and progressive motion in `src/scripts/motion.ts`.
 
 ## Motion and accessibility
 
