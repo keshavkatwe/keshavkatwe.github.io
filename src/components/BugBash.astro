@@ -1,0 +1,49 @@
+---
+import '../styles/game.css';
+const bays = [1, 2, 3, 4, 5, 6];
+---
+
+<section class="bb-section" id="play" aria-labelledby="bb-title" data-bugbash>
+  <div class="bb-section-top"><span class="bb-label">02 / The bonus level</span><span class="bb-label"><span class="bb-status-dot" aria-hidden="true"></span> A tiny game. A very real engineer.</span></div>
+  <div class="bb-heading"><h2 id="bb-title">BUG<span class="bb-title-spark" aria-hidden="true">✳</span><br/><em>BASH.</em></h2><div class="bb-intro"><span class="bb-small-tag">A 30-SECOND DISTRACTION</span><h3>Ship something<br/>great.</h3><p>Catch the bugs. Protect the releases.<br/>Discover a little about the builder.</p><a href="#work" class="bb-skip">Or, jump straight to the work <span aria-hidden="true">↗</span></a></div></div>
+
+  <div class="bb-console">
+    <div class="bb-console-bar"><span class="bb-console-brand"><span aria-hidden="true">⌘</span> KESHAV'S RELEASE ROOM</span><span class="bb-console-version">BUILD 001 / YOU’RE THE QA TEAM</span></div>
+    <div class="bb-layout">
+      <div class="bb-main">
+        <div class="bb-hud" aria-label="Game score and time">
+          <div class="bb-score"><span class="bb-label">SCORE</span><strong data-bb-score>0000</strong></div>
+          <div class="bb-combo"><span class="bb-label">STREAK</span><strong data-bb-combo>×1</strong></div>
+          <div class="bb-clock"><span class="bb-label">TIME LEFT</span><strong data-bb-time><b data-bb-seconds>30</b><span>s</span></strong></div>
+          <button class="bb-pause" type="button" data-bb-pause disabled aria-label="Pause game"><span aria-hidden="true">Ⅱ</span><span data-bb-pause-label>Pause</span></button>
+        </div>
+        <div class="bb-time-track" aria-hidden="true"><span data-bb-progress></span></div>
+        <div class="bb-arena-wrap">
+          <div class="bb-arena" data-bb-arena tabindex="0" role="group" aria-label="Bug Bash arena. Press keys 1 to 6 to hit the matching bay. Press P to pause." aria-describedby="bb-instructions">
+            {bays.map(bay => <button class="bb-bay" type="button" data-bb-bay={bay} data-kind="empty" aria-label={`Bay ${bay}, empty`} disabled>
+              <span class="bb-bay-number" aria-hidden="true">0{bay}</span><span class="bb-bay-grid" aria-hidden="true"></span>
+              <span class="bb-target" aria-hidden="true"><svg class="bb-bug-icon" viewBox="0 0 80 80"><path d="M31 21 25 12m24 9 6-9M22 33 11 28m47 5 11-5M20 45H8m52 0h12M23 57l-12 7m46-7 12 7M40 27v40" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><rect x="22" y="24" width="36" height="43" rx="18" fill="currentColor"/><path d="M31 23a9 9 0 0 1 18 0" fill="currentColor"/><path d="M40 32v27" stroke="#1c1d20" stroke-width="3"/><circle cx="32" cy="39" r="3" fill="#1c1d20"/><circle cx="48" cy="48" r="3" fill="#1c1d20"/></svg><svg class="bb-release-icon" viewBox="0 0 80 80"><path d="m40 9 28 16v31L40 72 12 56V25z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="m12 25 28 17 28-17M40 42v30M26 17l28 16" fill="none" stroke="currentColor" stroke-width="4"/><path d="m32 48 6 6 12-12" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="bb-target-word" data-bb-target-word>STANDBY</span></span>
+              <span class="bb-hit-feedback" data-bb-feedback aria-hidden="true"></span><kbd aria-hidden="true">{bay}</kbd>
+            </button>)}
+          </div>
+          <div class="bb-overlay" data-bb-overlay>
+            <div class="bb-overlay-symbol" data-bb-overlay-symbol aria-hidden="true">↗</div><span class="bb-small-tag" data-bb-overlay-kicker>READY FOR A QUICK CHALLENGE?</span>
+            <h3 data-bb-overlay-title>Less bugs.<br/>More shipped.</h3><p data-bb-overlay-copy>30 seconds. Six bays. How many bugs<br/>can you catch before the release?</p>
+            <button type="button" class="bb-start" data-bb-start><span data-bb-start-label>Let’s play</span><span aria-hidden="true">↗</span></button>
+            <span class="bb-overlay-note" data-bb-overlay-note>No sign-up. No sound. Just good reflexes.</span>
+          </div>
+        </div>
+        <div class="bb-controls" id="bb-instructions"><span><span class="bb-control-dot bb-control-bug" aria-hidden="true"></span> BUG <b>+100</b></span><span><span class="bb-control-dot bb-control-release" aria-hidden="true"></span> RELEASE <b>−150</b></span><span class="bb-keyboard-hint">Tap / click · keys <kbd>1</kbd>–<kbd>6</kbd> · <kbd>P</kbd> pause</span></div>
+      </div>
+      <aside class="bb-sidebar" aria-label="Game progress and engineering facts">
+        <div class="bb-best"><span class="bb-label">YOUR PERSONAL BEST</span><strong data-bb-best>0000<span aria-hidden="true">↗</span></strong><span class="bb-storage-note">Saved on this device.</span></div>
+        <div class="bb-discovery"><span class="bb-label"><span class="bb-status-dot" aria-hidden="true"></span> THE BUILDER BEHIND THE BUGS</span><div class="bb-fact-number" data-bb-fact-number aria-hidden="true">?</div><h4 data-bb-fact-title>Meet your next<br/>technical deep dive.</h4><p data-bb-fact-copy>Catch bugs to unlock five snapshots of the work. All case studies are also one scroll away.</p><a class="bb-fact-link" href="#work" data-bb-fact-link>Explore the work <span aria-hidden="true">↗</span></a><div class="bb-milestones" role="group" aria-label="0 of 5 engineering snapshots discovered" data-bb-milestones>{[1,2,3,4,5].map(n => <button type="button" data-bb-milestone={n} aria-label={`Snapshot ${n}, locked. Catch bugs to unlock.`} aria-pressed="false" disabled>0{n}</button>)}</div></div>
+        <div class="bb-tip"><span aria-hidden="true">✳</span><p>Three clean catches?<br/><strong>Your streak earns a bonus.</strong></p></div>
+      </aside>
+    </div>
+    <div class="bb-bottom-bar"><span data-bb-state>WAITING FOR THE FIRST COMMIT</span><span>REACT ENERGY. ZERO DEPENDENCIES.</span></div>
+  </div>
+  <p class="bb-live" data-bb-live role="status" aria-live="polite" aria-atomic="true"></p>
+  <noscript><p class="bb-no-script">Enable JavaScript to play Bug Bash. <a href="#work">Explore the engineering stories</a> in the meantime.</p></noscript>
+</section>
+<script>import '../scripts/game';</script>
