@@ -35,7 +35,7 @@ export const stories: Record<string, Story> = {
     ],
     flowTitle:'Trace a conversation through the system',flowNote:'Conceptual architecture based on the implemented platform. The public dashboard image below contains demo workspace data.',
     flow:[{title:'Receive',detail:'Messages arrive through WhatsApp Business API or Slack, with each channel’s own identity format.'},{title:'Resolve',detail:'Channel identities are normalized and the organisation boundary supplies the appropriate tenant context.'},{title:'Run',detail:'LangGraph runs the conversation workflow, including intent detection and entity handling with safeguards.'},{title:'Persist',detail:'PostgresSaver checkpoints keep multi-turn state durable across process restarts.'}],
-    evidence:'The public product page and developer guide provide a view into the product. The pictured Northstar Help Desk workspace is published demo content, not a customer account. No customer-volume, accuracy or latency figures are claimed.'
+    evidence:'Agenvik is open source under the MIT license. The public repository, product page and developer guide provide a view into the product. The pictured Northstar Help Desk workspace is published demo content, not a customer account. No customer-volume, accuracy or latency figures are claimed.'
   },
   investsky: {
     problem:'A financial mobile app has to make dense data, dynamic forms and long lists feel coherent on a small screen. The rebuild needed a common UI foundation across Android and iOS, with performance and release ownership treated as part of the same engineering problem.',
