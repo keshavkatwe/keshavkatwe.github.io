@@ -2,6 +2,15 @@
 
 An interactive Astro portfolio with an Electric Workshop art direction: oversized kinetic typography, a reactive chrome sculpture, colorful project chapters, engineering stories, and a playable Bug Bash arcade. Static HTML, CSS and TypeScript; no client-side framework runtime or additional animation dependencies.
 
+[Visit the portfolio](https://keshavkatwe.github.io/) · [GitHub profile](https://github.com/keshavkatwe)
+
+## Featured work
+
+| Project | Engineering focus | Explore |
+| --- | --- | --- |
+| **Agenvik** | Document-grounded AI agents for web, WhatsApp, and Slack. Open source under MIT. | [Case study](https://keshavkatwe.github.io/work/agenvik/) · [Source](https://github.com/keshavkatwe/agenvik) · [Product](https://agenvik.com) |
+| **Pushwing** | A React dashboard, API, and hosted MCP server for publishing workflows. | [Case study](https://keshavkatwe.github.io/work/pushwing/) · [Product](https://pushwing.com) |
+
 ## Local development
 
 Use Node 22.12+ and npm.
