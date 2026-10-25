@@ -10,6 +10,7 @@ An interactive Astro portfolio with an Electric Workshop art direction: oversize
 | --- | --- | --- |
 | **Agenvik** | Document-grounded AI agents for web, WhatsApp, and Slack. Open source under MIT. | [Case study](https://keshavkatwe.github.io/work/agenvik/) · [Source](https://github.com/keshavkatwe/agenvik) · [Product](https://agenvik.com) |
 | **Pushwing** | A React dashboard, API, and hosted MCP server for publishing workflows. | [Case study](https://keshavkatwe.github.io/work/pushwing/) · [Product](https://pushwing.com) |
+| **Toolgrain** | Typed, reusable tools and composable MCP servers for TypeScript. Open source under MIT. | [Case study](https://keshavkatwe.github.io/work/toolgrain/) · [Source](https://github.com/keshavkatwe/toolgrain) · [npm](https://www.npmjs.com/package/@toolgrain/mcp) |
 
 ## Local development
 
@@ -35,7 +36,7 @@ Bug Bash starts only on request. Catch acid-green bugs, avoid blue releases, and
 
 ## Content and assets
 
-Pushwing and Agenvik visuals are from their public websites. Agenvik's pictured workspace is demo content. The InvestSky phone is an original illustrative interaction study, not an employer screenshot. Outcomes are candidate-reported, drawn from the approved résumé. The downloadable PDF is an unchanged copy of the locked FE UAE Final résumé.
+Pushwing and Agenvik visuals are from their public websites. Agenvik's pictured workspace is demo content. Toolgrain’s approved outlined logo is reused from its public brand assets; attribution and the MIT notice are in `public/images/toolgrain-NOTICE.txt`. The InvestSky phone is an original illustrative interaction study, not an employer screenshot. Outcomes are candidate-reported, drawn from the approved résumé. The downloadable PDF is an unchanged copy of the locked FE UAE Final résumé.
 
 Google Fonts supplies Manrope and DM Sans with system font fallbacks. External product pages and the Pushwing walkthrough open only when selected.
 

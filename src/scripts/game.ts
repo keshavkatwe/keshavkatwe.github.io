@@ -22,8 +22,8 @@ if (game) {
     { threshold: 200, title: '11+ years. Still curious.', copy: 'React, React Native, TypeScript and frontend architecture. From the foundations to the finishing touches.', href: '#about', label: 'Meet the engineer', number: '11+' },
     { threshold: 500, title: 'An idea. An entire product.', copy: 'Pushwing: a publishing dashboard, API, hosted MCP server and background workers, built from scratch.', href: '/work/pushwing/', label: 'Inside Pushwing', number: '01' },
     { threshold: 850, title: 'Conversations with memory.', copy: 'Agenvik connects document-grounded LangGraph agents with WhatsApp, Slack and the web.', href: '/work/agenvik/', label: 'Inside Agenvik', number: '02' },
-    { threshold: 1200, title: 'Built for the thumb zone.', copy: 'At InvestSky, owned the React Native rebuild from architecture through release on iOS and Android.', href: '/work/investsky/', label: 'Inside the mobile rebuild', number: '03' },
-    { threshold: 1600, title: 'Make the whole team faster.', copy: 'At Sense, led frontend teams while staying hands-on with deployment, forms and shared engineering systems.', href: '/work/sense/', label: 'Inside the systems', number: '04' },
+    { threshold: 1200, title: 'Built for the thumb zone.', copy: 'At InvestSky, owned the React Native rebuild from architecture through release on iOS and Android.', href: '/work/investsky/', label: 'Inside the mobile rebuild', number: '04' },
+    { threshold: 1600, title: 'Make the whole team faster.', copy: 'At Sense, led frontend teams while staying hands-on with deployment, forms and shared engineering systems.', href: '/work/sense/', label: 'Inside the systems', number: '05' },
   ];
   let state: RoundState = 'ready';
   let score = 0;

@@ -1,0 +1,25 @@
+<div class="toolgrain-art" aria-hidden="true">
+  <div class="toolgrain-top"><span>THE MCP TOOLKIT</span><span>TYPESCRIPT / MIT</span></div>
+  <img src="/images/toolgrain-logo-dark.svg" width="353" height="84" loading="lazy" alt=""/>
+  <p>One definition.<br/><span>More possibilities.</span></p>
+  <div class="toolgrain-modules">
+    <div><span>01 / DEFINE</span><code>tool()</code></div>
+    <div><span>02 / COMPOSE</span><code>createServer()</code></div>
+    <div><span>03 / SERVE</span><code>stdio · HTTP</code></div>
+  </div>
+</div>
+
+<style>
+  .toolgrain-art{height:100%;box-sizing:border-box;background:#101214;color:#f6f4ee;padding:30px 32px 64px;display:flex;flex-direction:column;gap:26px}
+  .toolgrain-top{display:flex;justify-content:space-between;gap:12px;color:#c9cfd0;font:9px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.08em}
+  img{display:block;width:75%;max-width:300px;min-width:132px;height:auto;margin-top:4px}
+  p{margin:0;font-size:clamp(24px,2.6vw,36px);line-height:1.12;letter-spacing:-.04em;font-weight:500}
+  p span{color:#e4ee85}
+  .toolgrain-modules{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:8px;margin-top:auto}
+  .toolgrain-modules div{border-top:1px solid #485052;padding-top:13px;display:flex;flex-direction:column;gap:12px}
+  .toolgrain-modules span{font:8px ui-monospace,SFMono-Regular,Consolas,monospace;color:#c9cfd0;letter-spacing:.04em}
+  code{font:12px ui-monospace,SFMono-Regular,Consolas,monospace;color:#e4ee85;white-space:nowrap}
+  :global(.toolgrain .art-caption){color:#c9cfd0}
+  :global(.toolgrain .art-open){background:#e4ee85;color:#101214}
+  @media(max-width:600px){.toolgrain-art{padding:26px 22px 64px;gap:22px}p{font-size:32px}.toolgrain-modules{gap:7px}code{font-size:11px}.toolgrain-top{font-size:8px}}
+</style>
